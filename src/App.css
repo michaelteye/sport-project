@@ -1,38 +1,685 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width:95%;
+  margin: 0 auto;
+  padding: 15px;
+}
+.main {
+  width: 40%;
+  margin-top: 5px;
+  float: left;
+}
+
+.main div {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/*  Position the "next button to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* on hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* .caption-container {
   text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+} */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 9%;
+  margin-right: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.text {
+  float: left;
+  width: 40%;
+  margin-left: 20px;
+  /* width: 50%; */
+  /* align-items:flex-end; */
+}
+.affect {
+  margin-left: 100px;
+  margin-top: 30px;
+}
+
+.affect h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 20px;
+}
+
+.fle {
+  display: flex;
+  margin-top: 20px;
+}
+
+.price {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+
+  /* font: weight 100px;   */
+  font-weight: bold;
+}
+.bake {
+  justify-content: space-between;
+  margin-left: 2px;
+  padding-left: 8px;
+  margin-top: 7px;
+}
+
+.discount {
+  color: red;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.save {
+  color: white;
+  height: 25px;
+  background-color: green;
+  width: 80px;
+  align-items: center;
+  /* padding-bottom: 1; */
+  /* padding-top: 1px; */
+  padding: 3px 0 1px 6px;
+  margin-left: 10px;
+}
+
+.fav {
+  font-size: 13px;
+  padding-left: 70px;
+  font-weight: 10px;
+  color: rgba(0, 0, 0, 0.534);
+}
+
+.des {
+  margin-top: 40px;
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat", sans-serif;
+}
+
+.fill {
+  display: flex;
+  margin-top: 20px;
+}
+
+.fill.change {
+  padding-left: 10px;
+}
+
+.select {
+  margin-left: 110px;
+}
+
+.name {
+  margin-left: 95px;
+}
+
+.number {
+  margin-left: 10px;
+}
+
+.a {
+  margin-left: 100px;
+}
+
+.value {
+  margin-left: 80px;
+}
+
+.fill p {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+.change {
+  width: 230px;
+  height: 40px;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.37);
+}
+
+.btn {
+  display: flex;
+  margin-top: 30px;
+  height: 40px;
+  /* background-color: black; */
+}
+
+.btn p {
+  background-color: #f9dc38;
+  width: 350px;
+  padding: 6px 0 0 8px;
+  font-weight: bold;
+}
+
+.btn button {
+  width: 40px;
+  background-color: black;
+  /* height: 50px; */
+  border: 1px solid black;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* @media (max-width: 36rem) {
+  html .header__top {
+    font-size: 1.1rem;
   }
+  html .header__second--yellow {
+    display: none;
+  }
+} */
+body {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer {
+  background-color: #f5f5f6;
+  padding: 10rem;
+}
+.footer__elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer__elements--columns {
+  list-style-type: none;
+}
+.footer__elements--columns--items {
+  background-color: orangered;
+}
+.footer__elements--columns--items--head {
+  font-weight: 800;
+  margin-bottom: 4rem;
+  margin-right: 4rem;
+  font-size: 1.6rem;
+}
+.footer__elements--columns--items--sub {
+  margin-bottom: 2rem;
+}
+
+.header {
+  color: #fff;
+}
+.header__top {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+.header__top--language {
+  margin-left: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.header__top--chat {
+  box-sizing: content-box;
+  background-color: #25d366;
+  text-transform: capitalize;
+}
+.header__second {
+  display: flex;
+  flex-direction: column;
+}
+.header__second--yellow {
+  height: 8.8rem;
+  width: 16rem;
+  background-color: #fadd18;
+  position: absolute;
+  z-index: -1;
+}
+.header__second--top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  position: relative;
+}
+.header__second--top--cate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  left: 20rem;
+  border: 2px solid #eaeaec;
+}
+.header__second--top--cate--category {
+  color: #000;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.header__second--top--cate--down-icon {
+  margin: 2rem;
+}
+.header__second--top--searchsection {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #eaeaec;
+  position: absolute;
+  top: 1rem;
+  left: 34rem;
+}
+.header__second--top--searchbox {
+  font-family: inherit;
+  width: 60rem;
+  outline: 0;
+  border: 0;
+  font-size: 1.6rem;
+}
+.header__second--top--btn {
+  background-color: #fadd18;
+  color: #000;
+  padding: 1rem 2rem;
+  border: 0;
+}
+.header__second--top--searchicon {
+  background-color: #000;
+  padding: 1rem;
+  border: 5px solid #000;
+}
+.header__second--down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 3rem 0;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+.header__second--down--tabs {
+  display: flex;
+}
+.header__second--down--tabs li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+.header__second--down--tabs a:hover {
+  font-weight: 800;
+  border-bottom: 4px solid #fadd18;
+  color: #000;
+  margin-right: 2rem;
+  padding-bottom: 0.6rem;
+  font-size: 1.2rem;
+}
+
+.banner {
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.banner__text {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 4rem;
+  margin-left: 5rem;
+  margin-top: 5rem;
+}
+.banner__text--customized {
+  font-size: 4rem;
+}
+.banner__text--jerseys {
+  font-size: 4rem;
+  color: #fadd18;
+}
+.banner__photo {
+  width: 100%;
+  z-index: -2000;
+}
+.banner__line {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 50%;
+}
+.banner__line--yellow {
+  height: 0.4rem;
+  width: 8rem;
+  position: absolute;
+  bottom: 8rem;
+  left: 2rem;
+  z-index: 1000;
+  background-color: #fadd18;
+}
+.banner__line--white {
+  height: 0.4rem;
+  width: 8rem;
+  position: absolute;
+  bottom: 8rem;
+  left: 2rem;
+  z-index: 1000;
+  background-color: #fff;
+}
+.banner__shop {
+  z-index: 1000;
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+  display: flex;
+  align-items: center;
+}
+.banner__shop--text {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 14rem;
+  height: 4rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.banner__shop--icon {
+  border: 2px solid #fff;
+  background-color: #fff;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner__shop--icon--bag {
+  width: 1.286rem;
+  height: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.afterBanner__cards {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+.afterBanner .yellowCards {
+  background: #FEFAE1;
+  min-height: 200px;
+  padding: 1rem;
+  flex: 1;
+}
+.afterBanner .yellowCards__icon {
+  background-color: #f8d307;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+}
+.afterBanner .yellowCards__text--big {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.afterBanner .yellowCards__text--small {
+  font-size: 1.2rem;
+}
+.afterBanner__rewards-badge {
+  width: 15.9rem;
+  height: 5.6rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mostPopular {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.heading-text {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  min-height: 50px;
+}
+.mostPopular__card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
+  border: 2px solid #eaeaec;
+}
+.mostPopular__card--image {
+  position: relative;
+}
+.mostPopular__card--image--save {
+  background-color: #25d366;
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  color: #fff;
+  width: 6.3rem;
+  height: 2.4rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mostPopular__card--description {
+  font-size: 1.4rem;
+}
+.mostPopular__card--pricelist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mostPopular__card--pricelist--price {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+.mostPopular__card--pricelist--discount {
+  font-size: 1.2rem;
+  color: #ee503e;
+  text-decoration: line-through;
+  margin-left: 4px;
+}
+
+.countryleagues {
+  display: flex;
+  flex-direction: column;
+}
+
+.countryleagues__components {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.countryleagues__components--card {
+  padding-right: 2.5rem;
+}
+.countryleagues__components--card--photo {
+  max-width: 23.7rem;
+  height: 23.7rem;
+}
+.countryleagues__components--card--description {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin: 1.5rem;
+}
+
+.otherCollections {
+  margin: 10rem 0;
+}
+.otherCollections__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.otherCollections__container--cards {
+  /* width: 42.9rem; */
+  min-height: 24rem; 
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: brightness(30%); */
+}
+.otherCollections__container--cards--image {
+  z-index: -100;
+  position: relative;
+}
+.otherCollections__container--cards--image--sub {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  width: 100%;
+}
+.otherCollections__container--cards--image--sub--text {
+  color: #000;
+  font-size: 1.3rem;
+  display: flex;
+  padding-left: 1rem;
+  align-items: center;
+  font-weight: bolder;
+  flex: 1;
+  margin-right: auto;
+  position: relative;
+}
+.otherCollections__container--cards--image--sub--text:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  box-shadow: inset 0 0 3000px rgba(150, 150, 150, 0.192);
+  filter: blur(10px);
+}
+.otherCollections__container--cards--image--sub--icon {
+  display: inline;
+  background-color: #f9dc38;
+  padding: 2rem;
+}
+
+.beforeFooter {
+  display: flex;
+justify-content: space-between;
+}
+.beforeFooter__card {
+  position: relative;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+filter: brightness(70%);
+flex: 1;
+}
+
+.beforeFooter__card--text {
+  position: relative;
+  bottom: 14rem;
+  left: 3rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.beforeFooter__card--text--big {
+  font-weight: 800;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+.beforeFooter__card--text--small {
+  font-size: 1.6rem;
+}
+.beforeFooter__card--text--icons {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+.beforeFooter__card--text--icons > img {
+  background-color: #fff;
+  padding: 0.9rem;
+  margin-right: 1rem;
 }
