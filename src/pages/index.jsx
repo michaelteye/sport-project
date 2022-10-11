@@ -6,6 +6,7 @@ import Collection from "../layout/Collection";
 import Container from "../layout/Container";
 import SubCollection from "../layout/SubCollection";
 import Header from "../components/Header";
+import Footer from "../layout/Footer";
 export default function Home() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function Home() {
         <Collection />
         <SubCollection />
       </Container>
+      <Footer />
     </>
   );
 }
